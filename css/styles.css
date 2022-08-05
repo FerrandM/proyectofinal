@@ -1,4 +1,5 @@
 /* #212529 */
+/* nav/header */
 .container-fluid{
     background-color: #212529;
     text-align: center;
@@ -7,3 +8,178 @@ h1{
     color: aliceblue;
     padding-top: 20px;
 }
+.spc{
+    height: 8px;
+    width: 100%;
+}
+/* main */
+#grid-index{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2% ;
+    grid-template-rows: 29% 19% 19% 29%;
+    row-gap: 1%;
+    width: 100%;
+    height: 1400px;
+    background-color: beige;
+    grid-template-areas: "ifr us"
+                         "new pro"
+                         "new pro"
+                         "new pro";
+}
+#prese{
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+}
+#ifr-index{
+    grid-area: ifr;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+#new{
+    grid-area: new;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.titulo{
+    height: 40px;
+    width: 100%;
+    background-color: #212529;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.tit{
+    color: white;
+    text-align: center;
+    font-family: var(--bs-body-font-family);
+    font-size: 2rem;
+}
+.ui-card{
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ui-card-des{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.ui-card-des h3{
+    color: white;
+    margin: 10px 0;
+}
+.ui-card-des a{
+    color: white;
+}
+.ui-card:hover .ui-card-des{
+    opacity: 1;
+}
+
+.nov-pro{
+    display: flex;
+    flex-direction: column;
+    grid-area: pro;
+    justify-content: start;
+    align-items: center;
+}
+.carrusel{
+    margin:30px;
+    height: 300px;
+    width: 80%;
+}
+
+.descri{
+    display: flex;
+    margin: 25px;
+    background-color: rgb(222, 222, 200);
+    border-radius: 10px;
+}
+.descri-p{
+    padding: 25px;
+}
+
+#contactp{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    background-color: beige;
+}
+.pregunta{
+    margin: 25px;
+    margin-bottom: 0;
+    width: 50%;
+    background-color: #212529;
+    border-radius: 10px;
+}
+.qstion{
+    color: white;
+    padding: 3px;
+    margin: 0;
+}
+#correo_com{
+    margin: 25px;
+    width: 50%;
+}
+#subm{
+    margin: 25px;
+    margin-top: 0;
+    width: 100px;
+}
+/* footer */
+footer{
+    display: flex;
+    background-color: #212529;
+    height: 120px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nombre_apellido{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+#nov_promo{
+    margin-left: 25px;
+}
+/* responsive area*/
+@media only screen and (max-width:700px){
+    #grid-index{
+        display: flex;
+        flex-direction: column;
+        height: 2500px;
+    }
+    #ifr-index{
+        width: 100%;
+        height: 600px;
+    }
+    #new{
+        height: auto;
+    }
+    #correo_com{
+        width: 80%;
+    }
+
+}
+
+/* animaciones */
