@@ -1,5 +1,8 @@
 /* #212529 */
 /* nav/header */
+main{
+    background-color: beige;
+}
 .container-fluid{
     background-color: #212529;
     text-align: center;
@@ -109,7 +112,7 @@ h1{
 
 .descri{
     display: flex;
-    margin: 25px;
+    margin: 50px;
     background-color: rgb(222, 222, 200);
     border-radius: 10px;
 }
@@ -162,6 +165,79 @@ footer{
 #nov_promo{
     margin-left: 25px;
 }
+.product-grid{
+    display: grid;
+    grid-template-rows:50% 50%;
+    grid-template-columns: 50% 50%;
+    background-color: beige;
+    
+}
+.product{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px 200px;
+    grid-template-areas: "img titulo"
+                         "img descri";
+    border: 3px solid #212529;
+    margin: 20px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.product-img{
+    grid-area: img;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+}
+.product-ti{
+    justify-self: start;
+    align-self: flex-end;
+    grid-area: titulo;
+    border-bottom: 5px solid #212529;
+}
+.product-des{
+    grid-area: descri;
+    justify-self: start;
+}
+.container{
+    padding-top: 25px;
+}
+.product-destacado{
+    height: 40px;
+    width: 60%;
+    background-color: #212529;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 25px;
+    margin-left: 0;
+}
+
+.destacado{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 48% 48%;
+    grid-template-rows:100px 400px;
+    grid-template-areas:"img-des titulo-des"
+                        "img-des des-des";
+    column-gap: 4%;
+}
+.img-destacado{
+    height: 100%;
+    width: 100%;
+    grid-area:img-des;
+    border-radius: 10px;
+}
+.descripcion-destacados{
+    grid-area:des-des;
+}
+.titulo-destacado{
+    align-self: center;
+    grid-area: titulo-des;
+    font-weight: 700px;
+    border-bottom: 1px solid #212529;
+}
+
 /* responsive area*/
 @media only screen and (max-width:700px){
     #grid-index{
@@ -179,7 +255,18 @@ footer{
     #correo_com{
         width: 80%;
     }
-
+    .product-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .destacado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* animaciones */
