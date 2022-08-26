@@ -71,7 +71,7 @@ h1{
     width: 300px;
     height: 300px;
     border-radius: 5px;
-    background-image: url(/assets/img/pexels-eyad-tariq-3879495.jpg);
+    background-image: url("/assets/img/pexels-eyad-tariq-3879495.jpg");
     background-size: cover;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.3);
 }
@@ -180,7 +180,7 @@ footer{
     grid-template-rows: 60px 200px;
     grid-template-areas: "img titulo"
                          "img descri";
-    border: 3px solid #212529;
+    border: 2px solid #212529;
     margin: 20px;
     justify-items: center;
     align-items: center;
@@ -196,7 +196,7 @@ footer{
     justify-self: start;
     align-self: flex-end;
     grid-area: titulo;
-    border-bottom: 5px solid #212529;
+    border-bottom:1px solid #212529;
 }
 .product-des{
     grid-area: descri;
@@ -214,7 +214,15 @@ footer{
     margin: 25px;
     margin-left: 0;
 }
-
+.carousel-inner{
+    height: 500px;
+}
+.carousel-item{
+    height: 100%;
+}
+.d-block{
+    height: 100%;
+}
 .destacado{
     display: grid;
     margin: 20px;
